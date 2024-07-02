@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS icspaces;
+
+CREATE DATABASE icspaces;

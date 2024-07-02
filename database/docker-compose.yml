@@ -1,0 +1,15 @@
+version: '3'
+volumes:
+  data:
+services:
+  db:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: icspaces
+      MYSQL_DATABASE: icspaces
+      MYSQL_USER: icspaces
+      MYSQL_PASSWORD: icspaces
+    volumes:
+      - ./dev:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
